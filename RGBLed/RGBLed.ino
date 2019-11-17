@@ -2,7 +2,7 @@
 
 #include <Adafruit_NeoPixel.h>
 
-#define PIXELPIN D2 //
+#define PIXELPIN D6 //
 #define NUMPIXELS 1 //
 
 Adafruit_NeoPixel pixels(NUMPIXELS, PIXELPIN, NEO_GRB + NEO_KHZ800);

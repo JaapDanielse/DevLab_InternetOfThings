@@ -13,7 +13,7 @@ bool ServoDirection = true;
 void setup() 
 {
   // D0=16, D1=5, D2=4, D3=0, D4=2, D5=14, D6=12, D7=13, D8=15
-  Servo_SG90.attach(2); // D4=2
+  Servo_SG90.attach(D5); // D4=2
   Servo_SG90.write(ServoValue);
   Serial.begin(115200); // Set baudrate
 }

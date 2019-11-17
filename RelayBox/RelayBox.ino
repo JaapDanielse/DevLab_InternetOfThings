@@ -1,15 +1,15 @@
 void setup() 
 {
-   digitalWrite(D1, HIGH);
-   digitalWrite(D2, HIGH);
-   digitalWrite(D3, HIGH);
-   digitalWrite(D4, HIGH);
    pinMode(D1, OUTPUT);
+   digitalWrite(D1, HIGH);
    pinMode(D2, OUTPUT);
+   digitalWrite(D2, HIGH);
    pinMode(D3, OUTPUT);
+   digitalWrite(D3, HIGH);
    pinMode(D4, OUTPUT);
+   digitalWrite(D4, HIGH);
 
-   for(int i=0; i<=1000; i++)
+   for(int i=0; i<=3; i++)
    {
      digitalWrite(D1, LOW);
      delay(500);
