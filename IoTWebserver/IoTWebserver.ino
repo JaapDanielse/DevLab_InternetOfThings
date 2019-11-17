@@ -24,13 +24,13 @@
 // Defines
 //----------------------------------------------------------------------------------------------------
  #define TIME 
- //#define TEMPHUM 
- //#define SOIL 
- //#define LIGHT
- //#define MOTION 
- //#define RELAY
- //#define SERVO
- //#define RGBLED 
+ #define TEMPHUM 
+ #define SOIL 
+ #define LIGHT
+ #define MOTION 
+ #define RELAY
+ #define SERVO
+ #define RGBLED 
 
 
 // Includes
@@ -60,8 +60,8 @@
 
 // declarations
 //----------------------------------------------------------------------------------------------------
-const char* ssid = "Zon-Wireoost";
-const char* password = "1993199602";
+const char* ssid = "   ---ssid---   ";
+const char* password = "  ---password---  ";
 
 ESP8266WebServer server(80); //Server on port 80
 
