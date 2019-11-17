@@ -47,8 +47,8 @@ void MQTTConnect()
 
 
 //----------------------------------------------------------------------------------------------------
-void MQTTPublish(Adafruit_MQTT_Publish * PublishChanel, int Value)
+void MQTTPublish(Adafruit_MQTT_Publish * PublishChannel, int Value)
 {
-  if (!PublishChanel->publish(Value)) 
+  if (!PublishChannel->publish(Value)) 
     Serial.println(F("Publish Failed"));
 }

@@ -44,8 +44,8 @@ WiFiClient client;
 
 // MQTT Server 
 Adafruit_MQTT_Client mqtt(&client, IO_SERVER, IO_SERVERPORT, IO_USERNAME, IO_KEY);
-Adafruit_MQTT_Subscribe RelayChanel1 = Adafruit_MQTT_Subscribe(&mqtt, IO_USERNAME "/feeds/Relay1");
-Adafruit_MQTT_Subscribe RelayChanel2 = Adafruit_MQTT_Subscribe(&mqtt, IO_USERNAME "/feeds/Relay2");
+Adafruit_MQTT_Subscribe RelayChannel1 = Adafruit_MQTT_Subscribe(&mqtt, IO_USERNAME "/feeds/Relay1");
+Adafruit_MQTT_Subscribe RelayChannel2 = Adafruit_MQTT_Subscribe(&mqtt, IO_USERNAME "/feeds/Relay2");
 Adafruit_MQTT_Subscribe *subscription;
 
 //----------------------------------------------------------------------------------------------------
@@ -54,8 +54,8 @@ void setup()
   Serial.begin(115200);
   RelayInit();
   MQTTInit();
-  mqtt.subscribe(&RelayChanel1);
-  mqtt.subscribe(&RelayChanel2);
+  mqtt.subscribe(&RelayChannel1);
+  mqtt.subscribe(&RelayChannel2);
 }
 
 //----------------------------------------------------------------------------------------------------
@@ -65,9 +65,9 @@ void loop()
 
   while ((subscription = mqtt.readSubscription(20000))) // keep connection open 20 seconds after activity
   {
-    if (subscription == &RelayChanel1) 
-        SetRelay(1,!strcmp((char *)RelayChanel1.lastread, "ON"));
-    if (subscription == &RelayChanel2) 
-        SetRelay(2,!strcmp((char *)RelayChanel2.lastread, "ON"));
+    if (subscription == &RelayChannel1) 
+        SetRelay(1,!strcmp((char *)RelayChannel1.lastread, "ON"));
+    if (subscription == &RelayChannel2) 
+        SetRelay(2,!strcmp((char *)RelayChannel2.lastread, "ON"));
   }
 }
