@@ -25,9 +25,9 @@
 //----------------------------------------------------------------------------------------------------
  #define TIME 
  #define TEMPHUM 
- #define SOIL 
- #define LIGHT
- #define MOTION 
+ //#define SOIL 
+ //#define LIGHT
+ //#define MOTION 
  #define RELAY
  #define SERVO
  #define RGBLED 
@@ -60,7 +60,7 @@
 
 // declarations
 //----------------------------------------------------------------------------------------------------
-const char* ssid = "   ---ssid---   ";
+const char* ssid = "  ---ssid--  ";
 const char* password = "  ---password---  ";
 
 ESP8266WebServer server(80); //Server on port 80

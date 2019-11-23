@@ -30,8 +30,8 @@
 
 #define IO_SERVER      "io.adafruit.com"
 #define IO_SERVERPORT  1883                   
-#define IO_USERNAME    "  ---adafruit username--  "
-#define IO_KEY         "  ---adafruit key---  "
+#define IO_USERNAME  "  ---adafruit username---  "
+#define IO_KEY       "  ---adafruit io key---  "
 
 const int RELAYCH1PIN = D1;
 const int RELAYCH2PIN = D2;

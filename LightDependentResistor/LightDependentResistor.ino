@@ -13,7 +13,7 @@ void loop()
 {
    digitalWrite(D0,HIGH);
    LightValue = analogRead(A0); // read sensor value
-   Serial.println("Soil sensor value:" + String(LightValue)); // Show
+   Serial.println("Light sensor value:" + String(LightValue)); // Show
    digitalWrite(D0,LOW);
    delay(1000); // wait a second
 }
